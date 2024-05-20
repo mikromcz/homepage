@@ -1,0 +1,30 @@
+- BTC Display:
+    href: http://<IP>
+    icon: si-bitcoin-#F7931A
+    description: <IP>
+    ping: <IP>
+    widget:
+      # https://www.letscontrolit.com/wiki/index.php?title=ESP_Easy_web_interface#JSON_page_.28hidden_prior_to_version_2.0.2B.29
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      url: http://<IP>/json
+      mappings:
+        - field:
+            System: Uptime
+          label: Uptime
+          scale: 1/1440
+          suffix: days
+          format: float
+        - field:
+            System: Unit Number
+          label: Unit No.
+          format: number
+        - field:
+            WiFi: RSSI
+          label: RSSI
+          suffix: dBm
+        - field:
+            System: Load
+          label: Load
+          format: number
+          suffix: "%"
+          
