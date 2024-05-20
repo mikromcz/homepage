@@ -4,10 +4,8 @@
     description: <IP>
     ping: <IP>
     widget:
-    
       # https://github.com/prusa3d/Prusa-Link-Web/blob/bc157b2496874f1712165f71ac8521e5c0cb6e07/spec/openapi.yaml
-      # https://gethomepage.dev/latest/widgets/services/customapi/
-      type: customapi 
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
       hideErrors: true # If the printer is off
       headers:
         X-Api-Key: {{HOMEPAGE_VAR_PRUSALINK_API_KEY}}
