@@ -1,0 +1,32 @@
+- CO2:
+    href: http://<IP>
+    icon: mdi-molecule-co2-#ffffff
+    description: <IP>
+    ping: <IP>
+    widget:
+      # https://tasmota.github.io/docs/Commands/#status
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      url: http://<IP>/cm?cmnd=status%200
+      mappings:
+        - field:
+            StatusSTS: UptimeSec
+          label: Uptime
+          scale: 1/86400
+          suffix: days
+          format: float
+        - field:
+            StatusSNS:
+              MHZ19B: CarbonDioxide
+          label: CO2
+          format: number
+          suffix: ppm
+        - field:
+            StatusSTS:
+              Wifi: Signal
+          label: RSSI
+          suffix: dBm
+        - field:
+            StatusSTS: LoadAvg
+          label: Load
+          format: number
+          suffix: "%"
