@@ -1,0 +1,31 @@
+- ESP32-CAM:
+    href: http://<IP>
+    icon: /icons/prusaconnect.png
+    description: <IP>
+    ping: <IP>
+    widget:
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      hideErrors: true # If the ESP is off
+      url: http://<IP>/json_input
+      mappings:
+      - field: refreshInterval
+        label: Refresh
+        suffix: s
+      - field: led
+        label: LED
+        remap:
+        - value: ""
+          to: "OFF"
+        - value: "true"
+          to: "ON"
+      - field: flash
+        label: Flash
+        remap:
+        - value: ""
+          to: "OFF"
+        - value: "true"
+          to: "ON"
+      - field: rssi
+        label: RSSI
+        suffix: dBm
+        
