@@ -1,0 +1,62 @@
+- Prusa MK4:
+    href: http://<IP>
+    icon: /icons/prusalink.png
+    description: <IP>
+    ping: <IP>
+    widget:
+    
+      # https://github.com/prusa3d/Prusa-Link-Web/blob/bc157b2496874f1712165f71ac8521e5c0cb6e07/spec/openapi.yaml
+      # https://gethomepage.dev/latest/widgets/services/customapi/
+      type: customapi 
+      hideErrors: true # If the printer is off
+      headers:
+        X-Api-Key: {{HOMEPAGE_VAR_PRUSALINK_API_KEY}}
+
+      # PRINTER: telemetry[], temperature[], state[]
+      url: http://<IP>/api/printer
+      mappings:
+        - field:
+            telemetry: temp-nozzle
+          label: Nozzle
+          suffix: °C
+        - field:
+            telemetry: temp-bed
+          label: Bed
+          suffix: °C
+        - field:
+            telemetry: material
+          label: Material
+        - field:
+            state: text
+          label: State
+
+      # VERSION: api, server, nozzle_diameter, text, hostname, capabilities[]
+      # url: http://<IP>/api/version
+      # mappings:
+      #   - field: api
+      #     label: API
+      #   - field: nozzle_diameter
+      #     label: Nozzle
+      
+      # JOB: state, job, progress - BUT this is changing betveen states and Homepage shows errors
+      # url: http://<IP>/api/job
+      # mappings:
+      #   - field: state
+      #     label: State
+      #   - field:
+      #       progress: completion
+      #     label: Completion
+      #     format: percent # format=text/number shows 0.25, but format=percent does not show 25%
+      #   - field:
+      #       progress: printTimeLeft
+      #     label: Left
+      #     format: number
+      #     scale: 1/60
+      #     suffix: min
+
+      # INFO: nozzle_diameter, mmu, serial, hostname, min_extrusion_temp
+      # url: http://<IP>/api/v1/info
+
+      # STORAGE: storage
+      # url: http://<IP>/api/v1/storage
+      
