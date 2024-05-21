@@ -1,0 +1,15 @@
+- TMEP:
+    # https://tmep.cz/?page=muj-ucet&vystup=xxx
+    href: https://xxx.tmep.cz/
+    icon: /icons/tmep.png
+    description: Server Room Redditch
+    widget:
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      url: https://tmep.cz/vystup-json.php?id=xxx&export_key=xxx # Export posledniho mereni -> JSON, ci Rozsireny JSON
+      mappings:
+        - field: teplota
+          label: Temperature
+          suffix: °C
+        - field: vlhkost
+          label: Humidity
+          suffix: "%"
