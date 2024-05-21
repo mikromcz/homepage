@@ -1,0 +1,15 @@
+- TMEP:
+    href: https://<URL>
+    icon: /icons/tmep.png
+    description: Vrchlabi Server Room
+    ping: <IP>
+    widget:
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      url: https://<URL>/vystup-json.php
+      mappings:
+        - field: teplota
+          label: Temperature
+          suffix: °C
+        - field: vlhkost
+          label: Humidity
+          suffix: "%"
