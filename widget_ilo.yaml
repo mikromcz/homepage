@@ -1,0 +1,34 @@
+- VRCESXILO001:
+    href: https://<URL>
+    icon: ilo.png
+    description: Virtual Servers Host ILO
+    ping: <IP>
+    widget:
+      type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
+      url: https://<IP>/redfish/v1/Systems/1/
+      username: {{HOMEPAGE_VAR_ESXILO_USERNAME}}
+      password: {{HOMEPAGE_VAR_ESXILO_PASSWORD}}
+      mappings:
+        - field: PowerState
+          label: Power
+        - field:
+            Oem:
+              Hpe:
+                AggregateHealthStatus:
+                  Memory:
+                    Status: Health
+          label: Memory
+        - field:
+            Oem:
+              Hpe:
+                AggregateHealthStatus:
+                  Network:
+                    Status: Health
+          label: Network
+        - field:
+            Oem:
+              Hpe:
+                AggregateHealthStatus:
+                  Storage:
+                    Status: Health
+          label: Storage
