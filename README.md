@@ -36,6 +36,12 @@ https://github.com/arendst/Tasmota
 
 ## TMEP
 
-https://github.com/MultiTricker/TMEP
+https://github.com/MultiTricker/TMEP (Self hosted version)
+
+![widget_tmep](widget_tmep.png)
+
+## TMEP.cz
+
+https://www.tmep.cz/ (Web version)
 
 ![widget_tmep](widget_tmep.png)
