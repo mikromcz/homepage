@@ -16,6 +16,12 @@ https://github.com/letscontrolit/ESPEasy
 
 ![widget_espeasy](widget_espeasy.png)
 
+## HP ILO
+
+https://servermanagementportal.ext.hpe.com/docs/concepts/biosdatamodel/
+
+![widget_ilo](widget_ilo.png)
+
 ## PrusaLink
 
 https://github.com/prusa3d/Prusa-Link-Web
@@ -27,3 +33,9 @@ https://github.com/prusa3d/Prusa-Link-Web
 https://github.com/arendst/Tasmota
 
 ![widget_tasmota](widget_tasmota.png)
+
+## TMEP
+
+https://github.com/MultiTricker/TMEP
+
+![widget_tmep](widget_tmep.png)
