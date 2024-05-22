@@ -1,7 +1,7 @@
 - TMEP:
     # https://tmep.cz/?page=muj-ucet&vystup=xxx
     href: https://xxx.tmep.cz/
-    icon: /icons/tmep.png
+    icon: https://tmep.cz/assets/images/Loga/Graf-Icona.svg
     description: Server Room Redditch
     widget:
       type: customapi # https://gethomepage.dev/latest/widgets/services/customapi/
