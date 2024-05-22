@@ -1,6 +1,6 @@
 - TMEP:
     href: https://<URL>
-    icon: /icons/tmep.png
+    icon: https://tmep.cz/assets/images/Loga/Graf-Icona.svg
     description: Vrchlabi Server Room
     ping: <IP>
     widget:
